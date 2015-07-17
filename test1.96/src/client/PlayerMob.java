@@ -325,14 +325,14 @@ public class PlayerMob extends JPanel implements Serializable {
 				networkStartup.moveBackground(info, index);
 			}else{
 				//System.out.println(username + "is moving");
-				if(yCoordinate >= 556 && xCoordinate >= 1060){
-					this.setBounds(1060, 557, 150, 150);
+				if(yCoordinate >= 590 && xCoordinate >= 1015){
+					this.setBounds(1023, 593, 150, 150);
 					//this.setVisible(false);
-				}else if(yCoordinate >= 556){
-					this.setBounds(xCoordinate, 557, 150, 150);
+				}else if(yCoordinate >= 590){
+					this.setBounds(xCoordinate, 593, 150, 150);
 					//this.setVisible(false);
-				}else if(xCoordinate >= 1060){
-					this.setBounds(1060, yCoordinate, 150, 150);
+				}else if(xCoordinate >= 1015){
+					this.setBounds(1023, yCoordinate, 150, 150);
 				}else if(yCoordinate <= -145 && xCoordinate <= -125){
 					this.setBounds(-125, -150, 150, 151);
 					//this.setVisible(false);
