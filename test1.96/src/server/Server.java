@@ -83,7 +83,7 @@ public class Server {
 					}
 					serverObject.setArrayList(usernames);
 
-					tellEveryone();
+					//tellEveryone();
 				}
 			}
 			catch(SocketException e){

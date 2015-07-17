@@ -11,6 +11,7 @@ public class ServerObject implements Serializable {
 	private int xMove;
 	private int yMove;
 
+	
 	private Boolean faceDown = false;
 	private Boolean faceUp = false;
 	private Boolean faceLeft = false;
