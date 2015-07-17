@@ -363,6 +363,8 @@ public class Client {
 							otherPlayerMove(indexOfPlayer, serverObject);
 						}
 
+						
+						System.out.println(serverObject.getXCoordinates() + " <<<<____________");
 						//players.get(indexOfPlayer).updateCoordinates(serverObject);
 						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate() - myChat.getXCoordinate() + 400);
 						players.get(indexOfPlayer).updateFace(serverObject);

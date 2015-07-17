@@ -22,7 +22,15 @@ public class ServerObject implements Serializable {
 	private String username = "undefined";
 	private Boolean refreshCoordinates = false;
 
+	private ArrayList<Integer> xCoordinates;
 
+	public void setXCoordinates(ArrayList<Integer> xCoordinates){
+		this.xCoordinates = xCoordinates;
+	}
+	public ArrayList<Integer> getXCoordinates(){
+		return xCoordinates;
+	}
+	
 	public void setRefreshCoordinates(Boolean refreshCoordinates){
 		this.refreshCoordinates = refreshCoordinates;
 	}

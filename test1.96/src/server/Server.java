@@ -232,9 +232,10 @@ public class Server {
 					callTellEveryone();
 					moveEveryone();
 					
-					for(ServerObject obj:serverObjects){
+					System.out.println(xCoordinates);
+					/*for(ServerObject obj:serverObjects){
 						System.out.println("xCoordinates: " + obj.getXCoordinate() + "yCoordinates: " + obj.getYCoordinate());
-					}
+					}*/
 					//System.out.println("xCoordinates: " + xCoordinates + "---" + "yCoordinates: " + yCoordinates);
 					
 				}
@@ -336,6 +337,7 @@ public class Server {
 
 			while(it.hasNext()){
 				out = (ObjectOutputStream) it.next();
+				serverObject.setXCoordinates(xCoordinates);
 				synchronized(out){out.writeUnshared(serverObject);
 				out.reset();
 				}
