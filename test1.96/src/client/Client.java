@@ -364,6 +364,7 @@ public class Client {
 						}
 
 						//players.get(indexOfPlayer).updateCoordinates(serverObject);
+						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate());
 						players.get(indexOfPlayer).updateFace(serverObject);
 						players.get(indexOfPlayer).setClientServUsername(serverObject,clientObject);
 						
@@ -421,8 +422,8 @@ public class Client {
 		public void moveEveryoneElse(int indexOfPlayer, ServerObject serverObject) throws IndexOutOfBoundsException {
 				for(PlayerMob eryElse : players){
 					if(eryElse == players.get(indexOfPlayer)){
-						//players.get(indexOfPlayer).readMove(serverObject, indexOfPlayer);
-						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate());
+						players.get(indexOfPlayer).readMove(serverObject, indexOfPlayer);
+						
 					}else{
 						eryElse.worldMove(serverObject,indexOfPlayer);
 					}
