@@ -246,6 +246,7 @@ public class Server {
 				} catch (InterruptedException e){
 					e.printStackTrace();
 				}
+				
 			}
 			
 			public void callTellEveryone(){
