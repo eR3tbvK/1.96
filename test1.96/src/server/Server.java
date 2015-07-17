@@ -266,6 +266,7 @@ public class Server {
 					aObject.setYCoordinate(aObject.getYCoordinate() + aObject.getYMove());
 				}
 				
+				
 			}
 		}
 		

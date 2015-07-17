@@ -213,6 +213,9 @@ public class PlayerMob extends JPanel implements Serializable {
 			if(servObj.getUsername().equals(servObj.getArrayList().get(index))){  
 				realXMove = servObj.getXMove();
 				realYMove = servObj.getYMove();
+				
+				xCoordinate = servObj.getXCoordinate();
+				yCoordinate = servObj.getYCoordinate();
 			}
 		}
 
@@ -225,6 +228,7 @@ public class PlayerMob extends JPanel implements Serializable {
 			if(servObj.getUsername().equals(servObj.getArrayList().get(index))){ 
 				realXMove = -servObj.getXMove();
 				realYMove = -servObj.getYMove();
+				
 			}
 		}
 	}

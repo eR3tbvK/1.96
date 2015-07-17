@@ -129,12 +129,12 @@ public class InGame{
 				panel.remove(layeredPane);
 				Iterator<PlayerMob> allPlayers = players.iterator();
 				PlayerMob aPlayer = null;
-				while(allPlayers.hasNext()){
+				/*while(allPlayers.hasNext()){
 					aPlayer = (PlayerMob) allPlayers.next();
 					//System.out.println("INTHELOOP:info.getUsername =" + info.getUsername() + " myChat.getUsername =" + myChat.getUsername());
 					aPlayer.move();
-				}
-				background.move();
+				}*/
+				//background.move();
 				
 				panel.add(BorderLayout.CENTER,layeredPane);
 				panel.validate();
