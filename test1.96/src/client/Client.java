@@ -364,7 +364,7 @@ public class Client {
 						}
 
 						//players.get(indexOfPlayer).updateCoordinates(serverObject);
-						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate());
+						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate() - myChat.getXCoordinate() + 400);
 						players.get(indexOfPlayer).updateFace(serverObject);
 						players.get(indexOfPlayer).setClientServUsername(serverObject,clientObject);
 						
