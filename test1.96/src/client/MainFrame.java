@@ -14,11 +14,11 @@ public class MainFrame {
 		frame.setContentPane(panel);
 		frame.setSize(800,600);
 		//frame.setLocation(200,300);
-
+ 
 		//This is the code for FULL SCREEN
 		//frame.setTitle("");
 		//frame.setUndecorated(true);
-		//frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
 		networkStartup.startUp(networkStartup,panel);  			//call the startUp method and send the newly made object to it
 		frame.setVisible(true);

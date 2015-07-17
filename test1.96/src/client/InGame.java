@@ -34,10 +34,9 @@ public class InGame{
 
 
 	public InGame(){
-		layeredPane = new JLayeredPane();
+		layeredPane = new ZoomLayeredPane();
 		background = new Background();
 		layeredPane.add(background,99);
-		
 		//world = new World();
 	}
 	
@@ -126,7 +125,7 @@ public class InGame{
 			//layeredPane.add(background,99);
 				
 
-
+				
 				panel.remove(layeredPane);
 				Iterator<PlayerMob> allPlayers = players.iterator();
 				PlayerMob aPlayer = null;
@@ -136,7 +135,7 @@ public class InGame{
 					aPlayer.move();
 				}
 				background.move();
-
+				
 				panel.add(BorderLayout.CENTER,layeredPane);
 				panel.validate();
 				panel.repaint();
