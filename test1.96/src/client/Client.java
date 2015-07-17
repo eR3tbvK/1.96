@@ -424,7 +424,8 @@ public class Client {
 						//players.get(indexOfPlayer).readMove(serverObject, indexOfPlayer);
 						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate() - myChat.getXCoordinate() + 400);
 					}else{
-						eryElse.worldMove(serverObject,indexOfPlayer);
+						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate() - myChat.getXCoordinate() + 400);
+						//eryElse.worldMove(serverObject,indexOfPlayer);
 					}
 				}
 		}
