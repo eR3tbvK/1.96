@@ -214,11 +214,15 @@ public class PlayerMob extends JPanel implements Serializable {
 				realXMove = servObj.getXMove();
 				realYMove = servObj.getYMove();
 				
-				xCoordinate = servObj.getXCoordinate();
-				yCoordinate = servObj.getYCoordinate();
+				//xCoordinate = servObj.getXCoordinate();
+				//yCoordinate = servObj.getYCoordinate();
 			}
 		}
 
+	}
+	
+	public void serverCoordinates(int xCoordinate){
+		this.xCoordinate = xCoordinate;
 	}
 	
 	public void worldMove(ServerObject servObj, int index){

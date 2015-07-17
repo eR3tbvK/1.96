@@ -421,7 +421,8 @@ public class Client {
 		public void moveEveryoneElse(int indexOfPlayer, ServerObject serverObject) throws IndexOutOfBoundsException {
 				for(PlayerMob eryElse : players){
 					if(eryElse == players.get(indexOfPlayer)){
-						players.get(indexOfPlayer).readMove(serverObject, indexOfPlayer);
+						//players.get(indexOfPlayer).readMove(serverObject, indexOfPlayer);
+						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate() - myChat.getXCoordinate() + 400);
 					}else{
 						eryElse.worldMove(serverObject,indexOfPlayer);
 					}
