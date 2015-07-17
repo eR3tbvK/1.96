@@ -10,8 +10,8 @@ import javax.swing.*;
 
 public class PlayerMob extends JPanel implements Serializable {
 	private static final long serialVersionUID = 2;
-	private int xCoordinate = 300;
-	private int yCoordinate = 150;
+	private int xCoordinate = 400;
+	private int yCoordinate = 200;
 
 	private Boolean faceDown = false;
 	private Boolean faceUp = false;
@@ -64,7 +64,7 @@ public class PlayerMob extends JPanel implements Serializable {
 			e.printStackTrace();
 		}
 		this.setOpaque(false);
-        this.setBounds(300, 150, 150, 150);
+        this.setBounds(400, 200, 150, 150);
 	}
 
 	public void setXCoordinate(int xCoordinate){
@@ -320,7 +320,7 @@ public class PlayerMob extends JPanel implements Serializable {
 			
 			if(username.equals(clientUsername)){
 				this.setBounds(xCoordinate, yCoordinate, 150, 150);
-				this.setBounds(300, 150, 150, 150);
+				this.setBounds(400, 200, 150, 150);
 				
 				networkStartup.moveBackground(info, index);
 			}else{
@@ -360,8 +360,8 @@ public class PlayerMob extends JPanel implements Serializable {
 	public Rectangle getBounds() {
 	
 		if(username.equals(clientUsername)){
-			xCoordinate = 300;
-			yCoordinate = 150;
+			xCoordinate = 400;
+			yCoordinate = 200;
 		}
 		
 		if(faceRight){

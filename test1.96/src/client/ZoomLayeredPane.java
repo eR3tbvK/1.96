@@ -14,6 +14,6 @@ public class ZoomLayeredPane extends JLayeredPane {
 		double width = screenSize.getWidth();
 	
 		Graphics2D g2 = (Graphics2D) g;
-		g2.scale(width/800, height/600);
+		g2.scale(width/1024, height/726);
 	}
 }

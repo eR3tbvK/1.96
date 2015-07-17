@@ -25,10 +25,10 @@ public class Server {
 	ServerObject serverObject;
 	
 	public static void main(String[] args){
-		ApplicationContext factory = new ClassPathXmlApplicationContext("spring.xml");
+		//ApplicationContext factory = new ClassPathXmlApplicationContext("spring.xml");
 		//new ChatServer().go();  //Old way of doing it.
 		//Server server = new Server();	//New and improved way
-		Server server = factory.getBean("server",Server.class);
+		Server server = new Server();
 		server.go();
 	}
 	     

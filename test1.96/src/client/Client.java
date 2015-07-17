@@ -32,11 +32,11 @@ public class Client {
 
 
 	public void startUp(Client netStart,JPanel panel){
-		ApplicationContext factory = new ClassPathXmlApplicationContext("spring.xml");
+		//ApplicationContext factory = new ClassPathXmlApplicationContext("spring.xml");
 		
 		networkStartup = netStart;
 		//loginPage = new Login(); 									//Make new object loginPage
-		loginPage = factory.getBean("loginPage",Login.class);		//Its like new Login() but you tell the factory to do it
+		loginPage = new Login();		//Its like new Login() but you tell the factory to do it
 		loginPage.setPanel(panel);
 		loginPage.setNetObject(netStart); 							//Send the ChatClient object to loginPage
 		myChat = new ServerObject();								//Make new object called clientObject
@@ -46,7 +46,7 @@ public class Client {
 		//background = new Background();
 		//backgrounds = new ArrayList<Background>();
 		usernames = new ArrayList<String>();
-		inGame = factory.getBean("inGame",InGame.class);			//Make new object inGame from the factory
+		inGame = new InGame();			//Make new object inGame from the factory
 		inGame.setPlayer(player);
 		inGame.setNetObject(netStart);								//Send the ChatClient object to inGame
 		setUpNetworking();											
@@ -387,7 +387,7 @@ public class Client {
 			int xInWorld = 0; 
 			if(players.size() > 1 && thisUserIndex() >= 0){
 				//xInWorld = players.get(0).getXCoordinate() - players.get(indexOfPlayer).getXCoordinate();
-				xInWorld = players.get(thisUserIndex()).getXCoordinate() - 300;
+				xInWorld = players.get(thisUserIndex()).getXCoordinate() - 400;
 				System.out.println("----getXInWorld thisUserIndex()-----\n thisUserIndex(): " + thisUserIndex() + players.get(thisUserIndex()).getXCoordinate() + "  " + players.get(indexOfPlayer).getXCoordinate() + "\n" + xInWorld);
 			}
 			return xInWorld;
@@ -396,7 +396,7 @@ public class Client {
 		public int getYInWorld(int indexOfPlayer){
 			int yInWorld = 0; 
 			if(players.size() > 1  && thisUserIndex() >= 0){
-				yInWorld = players.get(thisUserIndex()).getYCoordinate() - 150;
+				yInWorld = players.get(thisUserIndex()).getYCoordinate() - 200;
 				//yInWorld = players.get(0).getYCoordinate() - players.get(indexOfPlayer).getYCoordinate();
 			}
 			return yInWorld;
