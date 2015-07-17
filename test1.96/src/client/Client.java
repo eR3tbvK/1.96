@@ -362,11 +362,11 @@ public class Client {
 							if(thisUser(indexOfPlayer))	moveEveryoneElse(indexOfPlayer, serverObject);
 							otherPlayerMove(indexOfPlayer, serverObject);
 						}
-
-						for(int i = 0; i < players.size(); i++){
-							players.get(i).setXCoordinate(serverObject.getXCoordinates().get(i));
+						if(players.size() == serverObject.getXCoordinates().size()){
+							for(int i = 0; i < players.size(); i++){
+								players.get(i).setXCoordinate(serverObject.getXCoordinates().get(i));
+							}
 						}
-						
 						System.out.println(serverObject.getXCoordinates() + " <<<<____________");
 						//players.get(indexOfPlayer).updateCoordinates(serverObject);
 						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate() - myChat.getXCoordinate() + 400);
