@@ -363,6 +363,9 @@ public class Client {
 							otherPlayerMove(indexOfPlayer, serverObject);
 						}
 
+						for(int i = 0; i < players.size(); i++){
+							players.get(i).setXCoordinate(serverObject.getXCoordinates().get(i));
+						}
 						
 						System.out.println(serverObject.getXCoordinates() + " <<<<____________");
 						//players.get(indexOfPlayer).updateCoordinates(serverObject);
