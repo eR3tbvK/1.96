@@ -422,10 +422,9 @@ public class Client {
 				for(PlayerMob eryElse : players){
 					if(eryElse == players.get(indexOfPlayer)){
 						//players.get(indexOfPlayer).readMove(serverObject, indexOfPlayer);
-						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate() - myChat.getXCoordinate() + 400);
+						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate());
 					}else{
-						players.get(indexOfPlayer).serverCoordinates(serverObject.getXCoordinate() - myChat.getXCoordinate() + 400);
-						//eryElse.worldMove(serverObject,indexOfPlayer);
+						eryElse.worldMove(serverObject,indexOfPlayer);
 					}
 				}
 		}
